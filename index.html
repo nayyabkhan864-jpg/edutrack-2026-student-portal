@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTrack | Student Academic Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span class="logo-icon">E</span>
+            <h2>Educational Track</h2>
+        </div>
+
+        <p class="menu-heading">MAIN MENU</p>
+
+        <nav>
+            <a href="#home" class="active">▦ Dashboard</a>
+            <a href="#profile">♙ My Profile</a>
+            <a href="#courses">▤ My Courses</a>
+            <a href="#tasks">✓ Assignments</a>
+            <a href="#activity">◷ Activity</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>STUDENT PORTAL</p>
+            <small>Learning made easier.</small>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content" id="home">
+
+        <!-- Top Header -->
+        <header class="topbar">
+
+            <div>
+                <h2>Student Dashboard</h2>
+                <p>Welcome back! Here's your academic overview.</p>
+            </div>
+
+            <div class="student-mini">
+                <div class="avatar">S</div>
+                <div>
+                    <strong>Student</strong>
+                    <small>Web Development</small>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+
+            <div>
+                <span class="welcome-tag">STUDENT PORTAL</span>
+                <h1>Learn. Grow. Achieve.</h1>
+                <p>
+                    Manage your courses, track your tasks
+                    and stay on top of your academic journey.
+                </p>
+            </div>
+
+            <div class="welcome-icon">🎓</div>
+
+        </section>
+
+
+        <!-- Academic Overview -->
+        <section class="overview" id="activity">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Academic Overview</h2>
+                    <p>Your learning activity at a glance.</p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <div class="stat-icon blue">▤</div>
+                    <p>Enrolled Course</p>
+                    <h2>01</h2>
+                    <small>Currently active</small>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">✓</div>
+                    <p>Completed Tasks</p>
+                    <h2 id="completedCount">00</h2>
+                    <small>Tasks completed</small>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">◷</div>
+                    <p>Click Activity</p>
+                    <h2 id="counter">00</h2>
+                    <small>Total interactions</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Profile and Course -->
+        <section class="content-grid">
+
+            <div class="panel" id="profile">
+
+                <div class="panel-heading">
+                    <h2>Student Profile</h2>
+                    <span class="status-badge">Active</span>
+                </div>
+
+                <div class="profile-info">
+
+                    <div class="profile-avatar">S</div>
+
+                    <div>
+                        <h3 id="profileName">Student Name</h3>
+                        <p>Undergraduate Student</p>
+                    </div>
+
+                </div>
+
+                <div class="profile-details">
+                    <p><span>Department</span><strong>Computer Science</strong></p>
+                    <p><span>Course</span><strong>Web Development</strong></p>
+                    <p><span>Semester</span><strong>Fall 2026</strong></p>
+                </div>
+
+            </div>
+
+
+            <div class="panel" id="courses">
+
+                <div class="panel-heading">
+                    <h2>My Course</h2>
+                    <span class="course-label">Active</span>
+                </div>
+
+                <div class="course-icon">💻</div>
+
+                <h3>Web Development</h3>
+
+                <p class="course-description">
+                    Learn HTML, CSS, JavaScript and
+                    modern web development skills.
+                </p>
+
+                <div class="progress-info">
+                    <span>Course Progress</span>
+                    <strong>75%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Assignment Section -->
+        <section class="panel task-panel" id="tasks">
+
+            <div class="panel-heading">
+                <div>
+                    <h2>Assignment Tracker</h2>
+                    <p>Manage your academic tasks.</p>
+                </div>
+
+                <span class="task-number">01 TASK</span>
+            </div>
+
+            <div class="task-row">
+
+                <div class="task-icon">📘</div>
+
+                <div class="task-details">
+                    <h3>JavaScript Practical Assignment</h3>
+                    <p>Subject: Web Development</p>
+                    <span id="taskStatus" class="pending">
+                        ● Pending
+                    </span>
+                </div>
+
+                <button id="statusButton">
+                    Mark Completed
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Activity and Form -->
+        <section class="content-grid bottom-grid">
+
+            <div class="panel">
+
+                <div class="panel-heading">
+                    <h2>Activity Counter</h2>
+                </div>
+
+                <p class="description">
+                    Track your dashboard interactions.
+                </p>
+
+                <div class="counter-display" id="bigCounter">0</div>
+
+                <div class="counter-buttons">
+                    <button id="countButton">+ Add Activity</button>
+                    <button id="resetButton" class="secondary-btn">
+                        Reset
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="panel-heading">
+                    <h2>Student Registration</h2>
+                </div>
+
+                <p class="description">
+                    Enter your name to update your profile.
+                </p>
+
+                <form id="studentForm">
+
+                    <label for="studentName">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter your full name"
+                    >
+
+                    <button type="submit" class="submit-btn">
+                        Update Profile
+                    </button>
+
+                </form>
+
+                <p id="formMessage" class="message"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Promise Section -->
+        <section class="panel verification-panel">
+
+            <div>
+                <h2>Assignment Verification</h2>
+                <p>
+                    Check whether your assignment task
+                    has been completed successfully.
+                </p>
+                <p id="promiseMessage">
+                    Verification is waiting.
+                </p>
+            </div>
+
+            <button id="promiseButton">
+                Verify Assignment
+            </button>
+
+        </section>
+
+
+        <!-- Delayed Notification -->
+        <div class="notification" id="delayedMessage">
+            Loading your student dashboard...
+        </div>
+
+
+        <footer>
+            <p>© 2026 EduTrack Student Portal | Web Development Workshop</p>
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
